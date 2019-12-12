@@ -1,0 +1,127 @@
+1. Get all the Jobs based on filters appplied by applicants.
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX getJob: <http://www.semanticweb.org/SER-531/Team-14/Jobs#>
+PREFIX getLoc: <http://www.semanticweb.org/SER-531/Team-14/Location#>
+
+SELECT DISTINCT ?title ?loc ?postdate ?appdeadline ?department ?specialzationRequirement ?graduateLevelReq ?lat ?long ?salary
+WHERE{
+	SERVICE <http://34.197.177.97:3030/Project/>
+  	{
+      SELECT ?title ?loc ?postdate ?appdeadline ?department ?specialzationRequirement ?graduateLevelReq ?salary
+      WHERE {
+        ?s  getJob:has_title ?title ;
+            getJob:located_in ?loc ;
+            getJob:posting_date ?postdate ;
+            getJob:application_Deadline ?appdeadline ;
+            getJob:belongs_to ?department ;
+            getJob:specialzationRequirement ?specialzationRequirement ;
+            getJob:graduateLevelRequirement ?graduateLevelReq ;
+            getJob:has_Salary ?salary .
+      		FILTER (?loc = "Phoenix").
+      		FILTER (xsd:float(?salary) > 1000.00)
+		}
+	}
+	SERVICE <http://137.116.191.4:3030/Project/>
+    {
+      SELECT ?lat ?long ?loc
+      WHERE {
+        ?location getLoc:has_Name ?loc;
+                  getLoc:has_Longitude ?long;
+                  getLoc:has_Latitude ?lat.
+      }
+    }
+}
+
+=======================================================================================================================================
+2. Visualize Number of Applicants in a location.
+
+PREFIX getLoc: <http://www.semanticweb.org/SER-531/Team-14/Location#>
+PREFIX getApp: <http://www.semanticweb.org/SER-531/Team-14/Applicants#>
+SELECT ?count ?Lat ?Long 
+WHERE {
+  SERVICE <http://34.94.128.250:3030/Project/>
+  {
+    SELECT (count(?App) as ?count) ?loc
+    WHERE {
+      ?App getApp:lives_in ?loc.
+      FILTER (?loc = "Dallas")
+    }
+    GROUP BY ?loc
+  }
+  SERVICE <http://137.116.191.4:3030/Project/>
+  {
+    SELECT ?Lat ?Long ?loc
+    WHERE {
+      ?location getLoc:has_Name ?loc;
+                getLoc:has_Longitude ?Long;
+                getLoc:has_Latitude ?Lat.
+    }
+  }
+}
+
+=======================================================================================================================================
+3. Visualize Number of Applicants in a location.
+
+PREFIX getLoc: <http://www.semanticweb.org/SER-531/Team-14/Location#>
+PREFIX getJob: <http://www.semanticweb.org/SER-531/Team-14/Jobs#>
+
+SELECT ?count ?lat ?long 
+WHERE {
+  SERVICE <http://34.197.177.97:3030/Project/>
+  {
+    select (count(?job) as ?count) ?loc
+    WHERE {
+      ?job getJob:located_in ?loc.
+      FILTER (?loc = "Dallas")
+    }
+    GROUP BY ?loc
+  }
+  SERVICE <http://137.116.191.4:3030/Project/>
+  {
+    select ?lat ?long ?loc
+    WHERE {
+      ?location getLoc:has_Name ?loc;
+                getLoc:has_Longitude ?long;
+                getLoc:has_Latitude ?lat.
+    }
+  }
+}
+
+=======================================================================================================================================
+4. Get all the Applicants based on filters appplied by Recruiters.
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX getLoc: <http://www.semanticweb.org/SER-531/Team-14/Location#>
+PREFIX getApp: <http://www.semanticweb.org/SER-531/Team-14/Applicants#>
+
+SELECT ?name ?email ?gender ?expectedGradDate ?expectedSalary ?skills ?major ?university ?schoolLevel ?specialization ?loc ?lat ?long
+WHERE{
+  	SERVICE <http://34.94.128.250:3030/Project/>
+  	{
+    	SELECT ?name ?email ?gender ?expectedGradDate ?expectedSalary ?skills ?major ?university ?schoolLevel ?specialization ?loc
+    	WHERE {
+            ?person    getApp:has_Name  ?name ;
+                       getApp:lives_in  ?loc ;
+                       getApp:email  ?email ;
+                       getApp:gender ?gender ;
+                       getApp:expectedGraduationDate  ?expectedGradDate ;
+                       getApp:expected_Salary  ?expectedSalary ;
+                       getApp:has_skills  "database","sql";
+                       getApp:major  ?major ;
+                       getApp:school  ?university ;
+                       getApp:schoolLevel ?schoolLevel ;
+                       getApp:specialization ?specialization ;
+                       getApp:schoolLevel "Bachelor" .
+    		}
+  	}
+    SERVICE <http://137.116.191.4:3030/Project/>
+    {
+        SELECT ?lat ?long ?loc
+        WHERE {
+			?location getLoc:has_Name ?loc;
+					  getLoc:has_Longitude ?long;
+					  getLoc:has_Latitude ?lat.
+      }
+    }
+}
