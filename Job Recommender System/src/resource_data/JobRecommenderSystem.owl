@@ -1,0 +1,752 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hp-pc/ontologies/JRS#"
+     xml:base="http://www.semanticweb.org/hp-pc/ontologies/JRS"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Jobs="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Location="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#"
+     xmlns:Applicants="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hp-pc/ontologies/JRS">
+        <owl:imports rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#has_skills -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#has_skills">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#SkillSet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#lives_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#lives_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ApplicantLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#belongs_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#belongs_to">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#belongs_to"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#belongs_to"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Department"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#located_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#located_in">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#posted_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#posted_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Company"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#requires_skills -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#requires_skills">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#requires_skills"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#requires_skills"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#applicant_Loc -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#applicant_Loc">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ApplicantLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#email">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#expected_Salary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#expected_Salary">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#gender">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#has_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#has_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#major -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#major">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#school -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#school">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#skill_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#skill_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#SkillSet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#application_Deadline -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#application_Deadline">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#city_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#city_Name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#company_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#company_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#has_Salary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#has_Salary">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#has_SkillName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#has_SkillName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#has_title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#has_title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#posting_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#posting_date">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ApplicantLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ApplicantLocation">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#City"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#SkillSet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#SkillSet">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#City">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Company"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#ComputerScience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#ComputerScience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Department"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Others"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Department"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Others -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Others">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Department"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#KeatRaina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#KeatRaina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <Applicants:has_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Interpersonal"/>
+        <Applicants:has_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Msexcel"/>
+        <Applicants:lives_in rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Miami"/>
+        <Applicants:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rkeatbg@ifeng.com</Applicants:email>
+        <Applicants:expected_Salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">103873.43</Applicants:expected_Salary>
+        <Applicants:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</Applicants:gender>
+        <Applicants:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keat Raina</Applicants:has_Name>
+        <Applicants:major rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NON IT</Applicants:major>
+        <Applicants:school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universitas Sanata Dharma</Applicants:school>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ModelAlfonse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ModelAlfonse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <Applicants:has_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Java"/>
+        <Applicants:has_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Sql"/>
+        <Applicants:lives_in rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#NewYork"/>
+        <Applicants:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amodenk7@a8.net</Applicants:email>
+        <Applicants:expected_Salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">111396.86</Applicants:expected_Salary>
+        <Applicants:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</Applicants:gender>
+        <Applicants:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Model Alfonse</Applicants:has_Name>
+        <Applicants:major rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IT</Applicants:major>
+        <Applicants:school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houston Baptist University</Applicants:school>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#RuddCristal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#RuddCristal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/JobRecSys#Applicant"/>
+        <Applicants:has_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Java"/>
+        <Applicants:has_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Sql"/>
+        <Applicants:lives_in rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Chicago"/>
+        <Applicants:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cruddb@woothemes.com</Applicants:email>
+        <Applicants:expected_Salary rdf:datatype="http://www.w3.org/2001/XMLSchema#float">137708.17</Applicants:expected_Salary>
+        <Applicants:gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</Applicants:gender>
+        <Applicants:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rudd Cristal</Applicants:has_Name>
+        <Applicants:major rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IT</Applicants:major>
+        <Applicants:school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midwestern State University</Applicants:school>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#AdministrativeandLogisticsAssistant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#AdministrativeandLogisticsAssistant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+        <Jobs:belongs_to rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Others"/>
+        <Jobs:located_in rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Miami"/>
+        <Jobs:posted_by rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#AmericanCouncils"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Communication"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#English"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Interpersonal"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Organizational"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Advanced_Java_Developer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Advanced_Java_Developer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+        <Jobs:belongs_to rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#IT"/>
+        <Jobs:posted_by rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#LycosEurope"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Communication"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Java"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Sql"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#AmericanCouncils -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#AmericanCouncils">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Company"/>
+        <Jobs:company_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American Councils for International Education Armenia</Jobs:company_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#CIT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#CIT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Company"/>
+        <Jobs:company_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIT</Jobs:company_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Communication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Communication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#SkillSet"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <Applicants:skill_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Communication</Applicants:skill_name>
+        <Jobs:has_SkillName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Communication</Jobs:has_SkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#English -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#English">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <Jobs:has_SkillName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</Jobs:has_SkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#IT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#IT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#ComputerScience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Interpersonal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Interpersonal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#SkillSet"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <Applicants:skill_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interpersonal</Applicants:skill_name>
+        <Jobs:has_SkillName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interpersonal</Jobs:has_SkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Java -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Java">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#SkillSet"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <Applicants:skill_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</Applicants:skill_name>
+        <Jobs:has_SkillName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</Jobs:has_SkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#LinkGard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#LinkGard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Company"/>
+        <Jobs:company_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LinkGard Systems, LLC</Jobs:company_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#LycosEurope -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#LycosEurope">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Company"/>
+        <Jobs:company_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lycos Europe</Jobs:company_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Msexcel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Msexcel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#SkillSet"/>
+        <Applicants:skill_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MS Excel</Applicants:skill_name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#OfficeManager -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#OfficeManager">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+        <Jobs:belongs_to rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Others"/>
+        <Jobs:located_in rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#NewYork"/>
+        <Jobs:posted_by rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#LinkGard"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Communication"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Word"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Organizational -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Organizational">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <Jobs:has_SkillName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organizational</Jobs:has_SkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Others -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Others">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Others"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Programmer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Programmer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Job"/>
+        <Jobs:belongs_to rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#IT"/>
+        <Jobs:located_in rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Dallas"/>
+        <Jobs:posted_by rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#CIT"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#VisualStudio"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#html"/>
+        <Jobs:requires_skills rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#xml"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Sql -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Sql">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#SkillSet"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <Applicants:skill_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sql</Applicants:skill_name>
+        <Jobs:has_SkillName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sql</Jobs:has_SkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#VardionLLC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#VardionLLC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Company"/>
+        <Jobs:company_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vardion LLC</Jobs:company_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#VisualStudio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#VisualStudio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <Jobs:has_SkillName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VisualStudio</Jobs:has_SkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Word -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#Word">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <Jobs:has_SkillName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Word</Jobs:has_SkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#html -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#html">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <Jobs:has_SkillName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">html</Jobs:has_SkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#xml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#xml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#DesiredSkills"/>
+        <Jobs:has_SkillName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xml</Jobs:has_SkillName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Chicago -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Chicago">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ApplicantLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#City"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <Applicants:applicant_Loc rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicago</Applicants:applicant_Loc>
+        <Jobs:city_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicago</Jobs:city_Name>
+        <Location:has_Latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.8373</Location:has_Latitude>
+        <Location:has_Longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.6861</Location:has_Longitude>
+        <Location:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicago</Location:has_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Dallas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Dallas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ApplicantLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#City"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <Applicants:applicant_Loc rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dallas</Applicants:applicant_Loc>
+        <Jobs:city_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dallas</Jobs:city_Name>
+        <Location:has_Latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32.7937</Location:has_Latitude>
+        <Location:has_Longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-96.7662</Location:has_Longitude>
+        <Location:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dallas</Location:has_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#LosAngeles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#LosAngeles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ApplicantLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#City"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <Applicants:applicant_Loc rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles</Applicants:applicant_Loc>
+        <Jobs:city_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles</Jobs:city_Name>
+        <Location:has_Latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34.1139</Location:has_Latitude>
+        <Location:has_Longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-118.4068</Location:has_Longitude>
+        <Location:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles</Location:has_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Miami -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Miami">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ApplicantLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#City"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <Applicants:applicant_Loc rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miami</Applicants:applicant_Loc>
+        <Jobs:city_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miami</Jobs:city_Name>
+        <Location:has_Latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.784</Location:has_Latitude>
+        <Location:has_Longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-80.2102</Location:has_Longitude>
+        <Location:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miami</Location:has_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#NewYork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#NewYork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Applicants#ApplicantLocation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Jobs#City"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <Applicants:applicant_Loc>New York</Applicants:applicant_Loc>
+        <Jobs:city_Name>New York</Jobs:city_Name>
+        <Location:has_Latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.6943</Location:has_Latitude>
+        <Location:has_Longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-73.9249</Location:has_Longitude>
+        <Location:has_Name>New York</Location:has_Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

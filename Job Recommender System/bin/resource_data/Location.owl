@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hp-pc/ontologies/2019/10/untitled-ontology-17#"
+     xml:base="http://www.semanticweb.org/hp-pc/ontologies/2019/10/untitled-ontology-17"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Location="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#has_Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Chicago -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Chicago">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <Location:has_Latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">41.8373</Location:has_Latitude>
+        <Location:has_Longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-87.6861</Location:has_Longitude>
+        <Location:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicago</Location:has_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Dallas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Dallas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <Location:has_Latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32.7937</Location:has_Latitude>
+        <Location:has_Longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-96.7662</Location:has_Longitude>
+        <Location:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dallas</Location:has_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#LosAngeles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#LosAngeles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <Location:has_Latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">34.1139</Location:has_Latitude>
+        <Location:has_Longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-118.4068</Location:has_Longitude>
+        <Location:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles</Location:has_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Miami -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Miami">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <Location:has_Latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25.784</Location:has_Latitude>
+        <Location:has_Longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-80.2102</Location:has_Longitude>
+        <Location:has_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miami</Location:has_Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#NewYork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#NewYork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp-pc/ontologies/SER-531/Team-14/Location#Location"/>
+        <Location:has_Latitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.6943</Location:has_Latitude>
+        <Location:has_Longitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-73.9249</Location:has_Longitude>
+        <Location:has_Name>New York</Location:has_Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

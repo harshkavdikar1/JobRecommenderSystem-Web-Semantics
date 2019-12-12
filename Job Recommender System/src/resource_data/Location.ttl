@@ -1,0 +1,511 @@
+@prefix : <> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+<http://City/New+York> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.6943";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-73.9249";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "New York" .
+
+<http://City/Los+Angeles> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "34.1139";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-118.4068";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Los Angeles" .
+
+<http://City/Chicago> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.8373";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-87.6861";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Chicago" .
+
+<http://City/Miami> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "25.784";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-80.2102";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Miami" .
+
+<http://City/Dallas> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "32.7937";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-96.7662";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Dallas" .
+
+<http://City/Philadelphia> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.0076";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-75.134";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Philadelphia" .
+
+<http://City/Houston> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "29.7868";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-95.3905";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Houston" .
+
+<http://City/Washington> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "38.9047";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-77.0163";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Washington" .
+
+<http://City/Atlanta> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "33.7626";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-84.4228";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Atlanta" .
+
+<http://City/Boston> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "42.3188";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-71.0846";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Boston" .
+
+<http://City/Phoenix> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "33.5722";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-112.0891";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Phoenix" .
+
+<http://City/Seattle> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "47.6211";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-122.3244";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Seattle" .
+
+<http://City/San+Francisco> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "37.7562";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-122.443";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "San Francisco" .
+
+<http://City/Detroit> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "42.3834";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-83.1024";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Detroit" .
+
+<http://City/San+Diego> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "32.8312";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-117.1226";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "San Diego" .
+
+<http://City/Minneapolis> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "44.9635";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-93.2678";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Minneapolis" .
+
+<http://City/Tampa> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "27.9937";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-82.4454";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Tampa" .
+
+<http://City/Denver> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "39.7621";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-104.8759";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Denver" .
+
+<http://City/Brooklyn> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.6501";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-73.9496";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Brooklyn" .
+
+<http://City/Queens> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.7498";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-73.7976";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Queens" .
+
+<http://City/Baltimore> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "39.3051";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-76.6144";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Baltimore" .
+
+<http://City/Riverside> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "33.9381";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-117.3948";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Riverside" .
+
+<http://City/Saint+Louis> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "38.6358";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-90.2451";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Saint Louis" .
+
+<http://City/Las+Vegas> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "36.2291";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-115.2607";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Las Vegas" .
+
+<http://City/Portland> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "45.5372";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-122.65";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Portland" .
+
+<http://City/San+Antonio> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "29.4722";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-98.5247";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "San Antonio" .
+
+<http://City/Sacramento> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "38.5667";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-121.4683";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Sacramento" .
+
+<http://City/San+Jose> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "37.3018";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-121.8485";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "San Jose" .
+
+<http://City/Orlando> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "28.4788";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-81.342";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Orlando" .
+
+<http://City/Cleveland> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.4767";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-81.6805";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Cleveland" .
+
+<http://City/Pittsburgh> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.4396";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-79.9763";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Pittsburgh" .
+
+<http://City/Cincinnati> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "39.1412";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-84.5059";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Cincinnati" .
+
+<http://City/Manhattan> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.7834";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-73.9662";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Manhattan" .
+
+<http://City/Austin> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "30.3006";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-97.7517";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Austin" .
+
+<http://City/Kansas+City> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "39.1239";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-94.5541";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Kansas City" .
+
+<http://City/Indianapolis> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "39.7771";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-86.1458";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Indianapolis" .
+
+<http://City/Columbus> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "39.986";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-82.9852";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Columbus" .
+
+<http://City/Virginia+Beach> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "36.7335";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-76.0435";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Virginia Beach" .
+
+<http://City/Charlotte> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "35.2079";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-80.8303";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Charlotte" .
+
+<http://City/Bronx> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.8501";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-73.8662";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Bronx" .
+
+<http://City/Milwaukee> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "43.064";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-87.9669";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Milwaukee" .
+
+<http://City/Providence> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.8229";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-71.4186";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Providence" .
+
+<http://City/Jacksonville> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "30.3322";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-81.6749";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Jacksonville" .
+
+<http://City/Salt+Lake+City> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.7774";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-111.9301";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Salt Lake City" .
+
+<http://City/Nashville> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "36.1714";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-86.7844";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Nashville" .
+
+<http://City/Memphis> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "35.1047";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-89.9773";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Memphis" .
+
+<http://City/Richmond> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "37.5295";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-77.4756";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Richmond" .
+
+<http://City/New+Orleans> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "30.0687";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-89.9288";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "New Orleans" .
+
+<http://City/Raleigh> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "35.8323";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-78.6439";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Raleigh" .
+
+<http://City/Louisville> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "38.1662";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-85.6488";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Louisville" .
+
+<http://City/Oklahoma+City> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "35.4676";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-97.5136";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Oklahoma City" .
+
+<http://City/Bridgeport> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.1909";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-73.1958";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Bridgeport" .
+
+<http://City/Buffalo> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "42.9017";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-78.8487";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Buffalo" .
+
+<http://City/Hartford> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.7661";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-72.6834";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Hartford" .
+
+<http://City/Fort+Worth> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "32.7814";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-97.3473";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Fort Worth" .
+
+<http://City/Tucson> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "32.1546";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-110.8782";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Tucson" .
+
+<http://City/El+Paso> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "31.8479";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-106.4309";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "El Paso" .
+
+<http://City/Honolulu> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "21.3294";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-157.846";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Honolulu" .
+
+<http://City/Omaha> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.2628";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-96.0495";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Omaha" .
+
+<http://City/McAllen> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "26.2325";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-98.2467";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "McAllen" .
+
+<http://City/Albuquerque> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "35.1053";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-106.6464";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Albuquerque" .
+
+<http://City/Birmingham> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "33.5276";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-86.7988";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Birmingham" .
+
+<http://City/Dayton> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "39.7797";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-84.1998";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Dayton" .
+
+<http://City/Rochester> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "43.168";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-77.6162";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Rochester" .
+
+<http://City/Sarasota> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "27.3391";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-82.5439";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Sarasota" .
+
+<http://City/Fresno> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "36.7834";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-119.7941";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Fresno" .
+
+<http://City/Allentown> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.5961";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-75.4756";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Allentown" .
+
+<http://City/Tulsa> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "36.1284";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-95.9042";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Tulsa" .
+
+<http://City/Concord> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "37.9722";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-122.0016";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Concord" .
+
+<http://City/Cape+Coral> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "26.6444";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-81.9956";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Cape Coral" .
+
+<http://City/Springfield> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "42.1155";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-72.5395";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Springfield" .
+
+<http://City/Colorado+Springs> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "38.8674";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-104.7606";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Colorado Springs" .
+
+<http://City/Charleston> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "32.8137";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-79.9643";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Charleston" .
+
+<http://City/Grand+Rapids> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "42.9615";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-85.6557";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Grand Rapids" .
+
+<http://City/Mission+Viejo> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "33.6095";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-117.6551";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Mission Viejo" .
+
+<http://City/Albany> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "42.6664";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-73.7987";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Albany" .
+
+<http://City/Knoxville> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "35.9692";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-83.9495";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Knoxville" .
+
+<http://City/Baton+Rouge> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "30.4423";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-91.1314";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Baton Rouge" .
+
+<http://City/Bakersfield> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "35.353";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-119.036";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Bakersfield" .
+
+<http://City/Ogden> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.228";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-111.9677";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Ogden" .
+
+<http://City/New+Haven> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.3112";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-72.9245";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "New Haven" .
+
+<http://City/Columbia> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "34.037";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-80.9042";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Columbia" .
+
+<http://City/Akron> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.0802";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-81.5219";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Akron" .
+
+<http://City/Provo> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.2458";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-111.6457";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Provo" .
+
+<http://City/Worcester> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "42.2705";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-71.8079";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Worcester" .
+
+<http://City/Mesa> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "33.4017";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-111.7181";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Mesa" .
+
+<http://City/Palm+Bay> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "27.9861";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-80.6628";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Palm Bay" .
+
+<http://City/Toledo> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.6639";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-83.5822";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Toledo" .
+
+<http://City/Murrieta> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "33.5719";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-117.1909";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Murrieta" .
+
+<http://City/Wichita> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "37.6897";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-97.3442";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Wichita" .
+
+<http://City/Des+Moines> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "41.5725";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-93.6104";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Des Moines" .
+
+<http://City/Staten+Island> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.5834";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-74.1496";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Staten Island" .
+
+<http://City/Long+Beach> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "33.8059";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-118.161";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Long Beach" .
+
+<http://City/Greenville> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "34.8363";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-82.365";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Greenville" .
+
+<http://City/Little+Rock> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "34.7255";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-92.3581";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Little Rock" .
+
+<http://City/Harrisburg> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "40.2752";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-76.8843";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Harrisburg" .
+
+<http://City/Denton> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "33.2176";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-97.1421";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Denton" .
+
+<http://City/Madison> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "43.0808";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-89.3922";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Madison" .
+
+<http://City/Reno> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "39.5497";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-119.8483";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Reno" .
+
+<http://City/Port+Saint+Lucie> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "27.2796";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-80.3883";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Port Saint Lucie" .
+
+<http://City/Oakland> a <http://www.semanticweb.org/SER-531/Team-14/Location#Location>;
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Latitude> "37.7903";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Longitude> "-122.2165";
+  <http://www.semanticweb.org/SER-531/Team-14/Location#has_Name> "Oakland" .

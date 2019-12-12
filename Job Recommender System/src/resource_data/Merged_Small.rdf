@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns=""
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+<rdf:Description rdf:about="http://Applicant/0">
+	<rdf:type rdf:resource="http://www.semanticweb.org/SER-531/Team-14/JobRecSys#Applicant"/>
+	<has_Name xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Luciano Sange</has_Name>
+	<email xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">lsange0@nature.com</email>
+	<gender xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Male</gender>
+	<school xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Universitas Yarsi</school>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">treasury</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">problem-solving</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">windows2000server</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">MSNet</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">management</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">visualstudio</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">visualc++</has_skills>
+	<schoolLevel xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Bachelor</schoolLevel>
+	<lives_in xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Phoenix</lives_in>
+	<expected_Salary xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">$92936.38</expected_Salary>
+	<major xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">IT</major>
+	<expectedGraduationDate xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">12/14/2017</expectedGraduationDate>
+	<specialization xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Electrical Engineering</specialization>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://Applicant/2">
+	<has_Name xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Lin Rushton</has_Name>
+	<rdf:type rdf:resource="http://www.semanticweb.org/SER-531/Team-14/JobRecSys#Applicant"/>
+	<email xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">lrushton2@sfgate.com</email>
+	<gender xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Male</gender>
+	<school xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Shizuoka Prefectural University</school>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">control</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">financial</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">soap</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">jsp</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">database</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">xml</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">team-orientation</has_skills>
+	<has_skills xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">webdevelopment</has_skills>
+	<schoolLevel xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">PHD</schoolLevel>
+	<lives_in xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Kansas City</lives_in>
+	<expected_Salary xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">$220861.95</expected_Salary>
+	<major xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">IT</major>
+	<expectedGraduationDate xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">10/31/2015</expectedGraduationDate>
+	<specialization xmlns="http://www.semanticweb.org/SER-531/Team-14/Applicants#">Mechanical Engineering</specialization>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://Location/Phoenix">
+	<rdf:type rdf:resource="http://www.semanticweb.org/SER-531/Team-14/Location#Location"/>
+	<has_Name xmlns="http://www.semanticweb.org/SER-531/Team-14/Location#">Phoenix</has_Name>
+	<has_Latitude xmlns="http://www.semanticweb.org/SER-531/Team-14/Location#">43.235916</has_Latitude>
+	<has_Longitude xmlns="http://www.semanticweb.org/SER-531/Team-14/Location#">-76.31339</has_Longitude>
+</rdf:Description>
+
+
+
+</rdf:RDF>
