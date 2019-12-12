@@ -22,15 +22,16 @@ WHERE{
       		FILTER (xsd:float(?salary) > 1000.00)
 		}
 	}
-	SERVICE <http://137.116.191.4:3030/Project/>
+    SERVICE <http://137.116.191.4:3030/Project/>
     {
-      SELECT ?lat ?long ?loc
-      WHERE {
-        ?location getLoc:has_Name ?loc;
-                  getLoc:has_Longitude ?long;
-                  getLoc:has_Latitude ?lat.
+        SELECT ?lat ?long ?loc2
+        WHERE {
+	  ?location getLoc:has_Name ?loc2;
+		    getLoc:has_Longitude ?long;
+		    getLoc:has_Latitude ?lat.
       }
     }
+	FILTER(?loc = ?loc2)
 }
 
 =======================================================================================================================================
@@ -117,11 +118,12 @@ WHERE{
   	}
     SERVICE <http://137.116.191.4:3030/Project/>
     {
-        SELECT ?lat ?long ?loc
+        SELECT ?lat ?long ?loc2
         WHERE {
-			?location getLoc:has_Name ?loc;
-					  getLoc:has_Longitude ?long;
-					  getLoc:has_Latitude ?lat.
+	  ?location getLoc:has_Name ?loc2;
+		    getLoc:has_Longitude ?long;
+		    getLoc:has_Latitude ?lat.
       }
     }
+	FILTER(?loc = ?loc2)
 }
